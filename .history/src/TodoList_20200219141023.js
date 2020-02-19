@@ -3,6 +3,7 @@ import 'antd/dist/antd.css'
 import store from './store'
 import {changeInputAction,deleteItemAction,addItemAction} from './store/actionCreators'
 import TodoListUI from './TodoListUI';
+import {TodoListUI} from './TodoListUI'
 
 class TodoList extends Component {
     constructor(props) {
@@ -11,7 +12,6 @@ class TodoList extends Component {
         this.clickBtn=this.clickBtn.bind(this)
         this.changeInputValue=this.changeInputValue.bind(this)
         this.storeChange=this.storeChange.bind(this)
-        this.deleteItem=this.deleteItem.bind(this)
         store.subscribe(this.storeChange)
         
     }
@@ -21,8 +21,6 @@ class TodoList extends Component {
                 inputValue={this.state.inputValue}
                 changeInputValue={this.changeInputValue}
                 list={this.state.list}
-                clickBtn={this.clickBtn}
-                deleteItem={this.deleteItem}
             />
           );
     }
