@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Input, Button, List} from 'antd'
 
 const TodoListUI = (props)=>{
@@ -8,7 +8,7 @@ const TodoListUI = (props)=>{
                 placeholder={props.inputValue} 
                 style={{width:'250px',marginRight:'10px'}}
                 onChange={props.changeInputValue}
-                value={props.inputValue}
+                value={.props.inputValue}
             />
             <Button type='primary' onClick={props.clickBtn}>增加</Button>
         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css'
 import store from './store'
-import {changeInputAction,deleteItemAction,addItemAction, getMyListAction} from './store/actionCreators'
+import {changeInputAction,deleteItemAction,addItemAction, getTodoList} from './store/actionCreators'
 import TodoListUI from './TodoListUI';
 
 class TodoList extends Component {
@@ -27,9 +27,8 @@ class TodoList extends Component {
           );
     }
     componentDidMount(){
-        const action=getMyListAction()
-        store.dispatch(action)
-        // console.log(action)
+        // const action=getTodoList()
+        // store.dispatch(action)
     }
 
     changeInputValue(e){

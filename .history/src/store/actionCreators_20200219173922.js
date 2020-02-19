@@ -1,4 +1,4 @@
-import  {GET_MY_LIST,CHANGE_INPUT, DELETE_ITEM, ADD_ITEM, GET_LIST} from './actionTypes'
+import  {CHANGE_INPUT, DELETE_ITEM, ADD_ITEM, GET_LIST} from './actionTypes'
 import axios from 'axios'
 
 export const changeInputAction=(value)=>({
@@ -24,13 +24,9 @@ export const getTodoList=()=>{
     return (dispatch)=>{
         axios.get('https://www.fastmock.site/mock/f6810f18774c59848477631a62a98c76/demo1/api/getTodoList').then((res)=>{
             const data=res.data
-            const action=getListAction(data)
+            const action=console.log(data)
             dispatch(action)
         })
         
     }
 }
-
-export const getMyListAction=()=>({
-    type:GET_MY_LIST
-})

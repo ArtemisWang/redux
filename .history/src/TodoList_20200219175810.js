@@ -28,8 +28,6 @@ class TodoList extends Component {
     }
     componentDidMount(){
         const action=getMyListAction()
-        store.dispatch(action)
-        // console.log(action)
     }
 
     changeInputValue(e){
